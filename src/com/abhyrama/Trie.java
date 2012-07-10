@@ -1,9 +1,8 @@
 package com.abhyrama;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.*;
 
 /**
  * An implementation of the Trie data structure.
@@ -156,16 +155,16 @@ public class Trie {
     public Map<Character, Node> children = new HashMap<Character, Node>();
   }
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws FileNotFoundException {
     Trie trie = new Trie();
-    //trie.add("cat");
-    trie.add("car");
-    trie.add("c");
-    trie.add("cart");
-    trie.add("cartier");
-    trie.add("carter");
-    trie.add("cgombo");
-    //trie.add("cam");
-    System.out.println(trie.get("car"));
+
+    Scanner scanner = new Scanner(new File("1000_families.txt"));
+    
+    while (scanner.hasNext()) {
+      String word = scanner.next().toLowerCase();
+      trie.add(word);
+    }
+    
+    System.out.println(trie.get("acc"));
   }
 }
