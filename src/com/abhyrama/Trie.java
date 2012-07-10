@@ -158,6 +158,7 @@ public class Trie {
   public static void main(String[] args) throws FileNotFoundException {
     Trie trie = new Trie();
 
+    //File from this link - http://www.lextutor.ca/freq/lists_download/
     Scanner scanner = new Scanner(new File("1000_families.txt"));
     
     while (scanner.hasNext()) {
