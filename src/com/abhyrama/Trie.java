@@ -57,10 +57,6 @@ public class Trie {
    * @return a boolean indicating whether this sequence is present in the Trie or not.
    */
   public boolean contains(String sequence) {
-    if (sequence.equals("")) {
-      return false;
-    }
-
     char[] chars = sequence.toCharArray();
 
     char first = chars[0];
@@ -166,6 +162,6 @@ public class Trie {
       trie.add(word);
     }
     
-    System.out.println(trie.get("acc"));
+    System.out.println(trie.get(" "));
   }
 }
